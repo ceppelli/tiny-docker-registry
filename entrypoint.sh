@@ -3,8 +3,8 @@
 set -e
 
 case "$1" in
-    *.yaml|*.yml) set -- registry serve "$@" ;;
-    serve|garbage-collect|help|-*) set -- registry "$@" ;;
+    *.yaml|*.yml) set -- /opt/docker/registry serve "$@" ;;
+    serve|garbage-collect|help|-*) set -- /opt/docker/registry "$@" ;;
 esac
 
 exec "$@"
