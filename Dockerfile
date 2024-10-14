@@ -26,8 +26,8 @@ RUN set -eux; \
 	rm /opt/docker/registry.tar.gz; \
 	/opt/docker/registry --version
 
-COPY docker/config-example.yml /etc/distribution/config.yml
-COPY docker/entrypoint.sh /opt/docker/entrypoint.sh
+COPY config-example.yml /etc/distribution/config.yml
+COPY entrypoint.sh /opt/docker/entrypoint.sh
 
 VOLUME ["/var/lib/registry"]
 EXPOSE 5000
